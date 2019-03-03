@@ -13,7 +13,7 @@
         {{!-- Left Side Burger Display --}}
         <div class="col-6">
           <ul>
-            {{#each burgers}}
+            {{#each burger}}
             {{#unless devoured}}
             <li>
               <div class="burger-li text-center mb-md-2">
@@ -29,7 +29,7 @@
         {{!-- Right Side Burger Display --}}
         <div class="col-6">
           <ul>
-            {{#each burgers}}
+            {{#each burger}}
             {{#if devoured}}
             <li class="burger-li right-burger-li">
               {{this.burger_name}}
