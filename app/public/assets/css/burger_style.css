@@ -1,0 +1,36 @@
+body {
+  background-color: orange;
+}
+
+ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+.burger-li {
+  background-color: antiquewhite;
+  /* padding: 10px 20px; */
+}
+
+.right-burger-li {
+  border: 2px solid grey;
+}
+
+#burger-img {
+  height: 150px;
+}
+
+@media only screen and (min-width: 768px) {
+  .burger-li {
+    background-color: antiquewhite;
+    padding: 10px 20px;
+    display: inline-block;
+    width: 250px;
+  }
+  .right-burger-li {
+    border: 2px solid grey;
+  }
+  #burger-img {
+    height: 150px;
+  }
+}
