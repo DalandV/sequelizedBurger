@@ -20,7 +20,7 @@ module.exports = function(app) {
         }
       }
     ).then(function(dbBurger) {
-      res.redirect("/");
+      res.json("/");
     });
   });
 };

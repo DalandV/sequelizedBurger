@@ -22,9 +22,11 @@ $(function() {
   $(".devour-btn").on("click", function(event) {
     event.preventDefault();
     var id = $(this).data("id");
+    console.log(id);
     // Send the PUT request.
-    $.ajax("/api/burger/update/" + id, {
-      type: "PUT"
+    $.ajax({
+      method: "PUT",
+      url: `/api/burger/update/${id}`
     }).then(function() {
       console.log("Burger devoured");
       location.reload();
