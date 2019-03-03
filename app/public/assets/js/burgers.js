@@ -8,7 +8,7 @@ $(function() {
         .trim()
     };
     // Send the POST request.
-    $.ajax("/api/burgers", {
+    $.ajax("/api/burger/add", {
       type: "POST",
       data: newBurger
     }).then(function() {
@@ -22,13 +22,9 @@ $(function() {
   $(".devour-btn").on("click", function(event) {
     event.preventDefault();
     var id = $(this).data("id");
-    var devouredState = {
-      devoured: 1
-    };
     // Send the PUT request.
-    $.ajax("/api/burgers/" + id, {
-      type: "PUT",
-      data: devouredState
+    $.ajax("/api/burger/update/" + id, {
+      type: "PUT"
     }).then(function() {
       console.log("Burger devoured");
       location.reload();
